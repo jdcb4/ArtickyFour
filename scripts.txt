@@ -1,0 +1,6 @@
+    <script src="js/index.js"></script>
+    <script src="js/initiate.js"></script>
+    <script src="js/show.js"></script>
+    <script src="js/shuffle.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/topics.js"></script>
