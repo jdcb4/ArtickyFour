@@ -6,110 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Articky</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <div class="container" id="CtnStart" style="background: #0ad643;border-width: 5px;border-style: solid;">
-        <div class="row" style="border-width: 5px;border-style: solid;border-bottom-style: solid;">
-            <div class="col" id="btnStart" style="background: #9c5778;border-width: 5px;border-bottom-style: none;">
+    <div class="container" id="CtnStart" style="display:block">
+        <div class="row" style="background: #229944;">
+            <div class="col" id="btnStart">
                 <h1 id="lblStart" style="text-align: center;border-bottom-style: none;" onclick="fnInitiate()">Start</h1>
             </div>
         </div>
-        <div class="row" style="border-bottom-style: solid;">
-            <div class="col" style="border-bottom-style: none;">
+        <div class="row" style="background: #6B2900;">
+            <div class="col">
                 <h1 id="lblStartTest" style="border-bottom-style: none;text-align: center;">Test</h1>
             </div>
         </div>
     </div>
     <div class="container" id="CtnGame" style="display:none">
-        <div class="row" style="border-width: 5px;border-style: solid;background: #ff0000;">
+        <div class="row" style="background: #229944;">
             <div class="col">
                 <h1 id="lblCategory" style="text-align: center;">Category</h1>
             </div>
         </div>
-        <div class="row" style="border-width: 5px;border-style: solid;background: #0029ff;">
+        <div class="row" style="background: var(--blue);">
             <div class="col">
                 <h1 id="lblWord" style="text-align: center;">Word</h1>
             </div>
         </div>
-        <div class="row" style="border-width: 5px;border-style: solid;border-bottom-width: 0px;height: 400px;">
-            <div class="col" id="btnSkip" style="background: #ffe500;text-align: center;" onclick="fnSkip()">
+        <div class="row">
+            <div class="col" id="btnSkip" style="text-align: center;background: var(--yellow);" onclick="fnSkip()">
                 <h1>Skip</h1>
-                <p id="SkipList" style="text-align: center;">Paragraph</p>
+                <p id="SkipList" style="text-align: center;">&nbsp;</p>
             </div>
-            <div class="col" id="btnNext" style="background: #14ff00;" onclick="fnNext()">
+            <div class="col" id="btnNext" onclick="fnNext()" style="background: var(--pink);">
                 <h1 style="text-align: center;">Next</h1>
-                <p id="WordList" style="text-align: center;">Paragraph</p>
+                <p id="WordList" style="text-align: center;">&nbsp;</p>
             </div>
         </div>
-        <div class="row" style="border-width: 5px;border-style: solid;">
-            <div class="col" style="background: #9c5778;border-width: 5px;">
+        <div class="row" style="background: #6B2900;">
+            <div class="col">
                 <h1 id="lblTurnScore" style="text-align: center;">Turn Score</h1>
+                <h1 id="lblTimer" style="text-align: center;">Timer</h1>
             </div>
         </div>
     </div>
     <div class="container" id="CtnMenu" style="display:none">
-        <div class="row" style="border-width: 5px;border-style: solid;background: #ff0000;">
+        <div class="row" style="background: #229944;">
             <div class="col">
                 <h1 id="lblChooseCategory" style="text-align: center;">Choose a Category</h1>
             </div>
         </div>
-        <div class="row" style="border-width: 5px;border-style: solid;border-bottom-width: 0;border-bottom-style: solid;">
-            <div class="col" id="btnPeople" style="background: #ad4c4c;" onclick="fnPeople()">
+        <div class="row">
+            <div class="col" id="btnPeople" style="background: var(--yellow);" onclick="fnPeople()">
                 <p style="text-align: center;">People</p>
             </div>
-            <div class="col" id="btnNature" style="background: #ff9191;" onclick="fnNature()">
+            <div class="col" id="btnNature" style="background: var(--secondary);" onclick="fnNature()">
                 <p style="text-align: center;">Nature</p>
             </div>
         </div>
-        <div class="row" style="border-width: 5px;border-style: solid;border-top-width: 0px;border-bottom-width: 0px;">
-            <div class="col" id="btnObject" style="background: #346bac;" onclick="fnObject()">
+        <div class="row">
+            <div class="col" id="btnObject" style="background: var(--cyan);" onclick="fnObject()">
                 <p style="text-align: center;">Object</p>
             </div>
-            <div class="col" id="btnAction" style="background: #e8ec3a;" onclick="fnAction()">
+            <div class="col" id="btnAction" style="background: var(--orange);" onclick="fnAction()">
                 <p style="text-align: center;">Action</p>
             </div>
         </div>
-        <div class="row" style="border-width: 5px;border-style: solid;border-top-width: 0px;border-bottom-width: 0px;">
-            <div class="col" id="btnRandom" style="background: #d92e23;" onclick="fnRandom()">
+        <div class="row">
+            <div class="col" id="btnRandom" style="background: var(--danger);" onclick="fnRandom()">
                 <p style="text-align: center;">Random</p>
             </div>
-            <div class="col" id="btnWorld" style="background: #ec3ad0;" onclick="fnWorld()">
+            <div class="col" id="btnWorld" style="background: var(--purple);" onclick="fnWorld()">
                 <p style="text-align: center;">World</p>
             </div>
         </div>
-        <div class="row" style="border-width: 5px;border-style: solid;border-top-width: 0px;">
-            <div class="col" id="btnPickForMe" style="background: #798696;" onclick="fnPickForMe()">
+        <div class="row" style="background: #6B2900;">
+            <div class="col" id="btnPickForMe" onclick="fnPickForMe()">
                 <p style="text-align: center;">Pick for me</p>
             </div>
         </div>
     </div>
-    <div class="container" id="CtnRoundEnd" style="background: #0ad643;border-width: 5px;border-style: solid;display:none">
-        <div class="row">
-            <div class="col">
+    <div class="container" id="CtnRoundEnd" style="display:none">
+        <div class="row" style="background: #229944;">
+            <div class="col" displa="">
                 <h1>Round is Over</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="background: #6B2900;">
             <div class="col" id="btnReset">
                 <h1 id="lblRoundOutcome">[round outcome]<br></h1>
             </div>
         </div>
     </div>
-    <div class="container" id="CtnTurnEnd" style="background: #0ad643;border-width: 5px;border-style: solid;display:none">
-        <div class="row">
+    <div class="container" id="CtnTurnEnd" style="display:none">
+        <div class="row" style="background: #229944;">
             <div class="col">
                 <h1 style="text-align: center;">Time's up!</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="background: var(--blue);">
             <div class="col">
                 <h1 id="lblTurnOutcome">[turn outcome]<br></h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col" id="btnBackToMenu" style="background: #7b1515;">
+        <div class="row" style="background: #6B2900;">
+            <div class="col" id="btnBackToMenu" onclick="fnShowMenu()">
                 <h1 id="lblBackToMenu" style="text-align: center;">Back to menu<br></h1>
             </div>
         </div>
@@ -122,6 +122,7 @@
     <script src="js/shuffle.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/topics.js"></script>
+    <script src="js/turnend.js"></script>
 </body>
 
 </html>

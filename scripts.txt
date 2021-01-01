@@ -4,3 +4,4 @@
     <script src="js/shuffle.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/topics.js"></script>
+    <script src="js/turnend.js"></script>

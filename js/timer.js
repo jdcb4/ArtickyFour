@@ -4,7 +4,7 @@ function fnTimer() {
   var now = new Date().getTime();                             // Get today's date and time
   var distance = countDownDate - now;                         // Find the distance between now and the count down date
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);  // Time calculations for days, hours, minutes and seconds
-  //document.getElementById("lblTurnTimer").innerHTML = "Time remaining: " + seconds + "s ";     // Display the result in the element with id="TurnTimer"
+  document.getElementById("lblTimer").innerHTML = "Time remaining: " + seconds + "s ";     // Display the result in the element with id="TurnTimer"
   // If the count down is finished, write some text
   if (distance < 0) {
       clearInterval(x);
