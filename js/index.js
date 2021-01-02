@@ -39,7 +39,7 @@ function fnNext() {
     TurnAttempted++;
     TurnScore++;
     if (this[Category].length === 0) {
-        this[Category] = ['OriginalList' + Category].slice();
+        this[Category] = this['OriginalList' + Category].slice();
         fnShuffle(this[Category]);
     }
     CurrentWord = this[Category].pop();
@@ -59,7 +59,7 @@ function fnSkip() {
     }
     SkipList = SkipList.concat(RecentWord + "<br>")
     if (this[Category].length === 0) {
-        this[Category] = ['OriginalList' + Category].slice();
+        this[Category] = this['OriginalList' + Category].slice();
         fnShuffle(this[Category]);
     }
     CurrentWord = this[Category].pop();
