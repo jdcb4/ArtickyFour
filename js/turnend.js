@@ -11,7 +11,7 @@ function fnEndTurn() {
     RoundCorrect += TurnCorrect;
     RoundAttempted += TurnAttempted;
     RoundScore += TurnScore;
-    RoundSkipped += TurnSkipped
+    RoundSkipped += TurnSkipped;
 
     fnShowTurnEnd()
 

@@ -16,7 +16,10 @@ var TurnTime = 10;
 var TimerUpdateInterval = 1000;
 
 
-
+var RoundCorrect=0;
+var RoundAttempted=0;
+var RoundScore=0;
+var RoundSkipped=0;
 
 
 function fnSelect() {
