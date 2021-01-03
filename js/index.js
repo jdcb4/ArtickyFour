@@ -12,7 +12,7 @@ var SkipList = "";
 var RecentWord = '';
 var CurrentWord = ''
 var CurrentWord = '';
-var TurnTime = 10;
+var TurnTime = 30;
 var TimerUpdateInterval = 1000;
 
 
