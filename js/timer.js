@@ -8,7 +8,6 @@ function fnTimer() {
   // If the count down is finished, write some text
   if (distance < 0) {
       clearInterval(x);
-      //document.getElementById("lblTurnTimer").innerHTML = "EXPIRED";
       fnEndTurn()
     }
   }, TimerUpdateInterval);                                    // Timer updated frequency, set from index.js
