@@ -20,7 +20,7 @@ var RoundCorrect=0;
 var RoundAttempted=0;
 var RoundScore=0;
 var RoundSkipped=0;
-
+var TurnCompleted = 0
 
 function fnSelect() {
     fnShowGame();

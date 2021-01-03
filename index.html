@@ -32,7 +32,7 @@
                 <h1 id="lblWord" style="text-align: center;">Word</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="height: 300px;">
             <div class="col" id="btnSkip" style="text-align: center;background: var(--yellow);" onclick="fnSkip()">
                 <h1>Skip</h1>
                 <p id="SkipList" style="text-align: center;">&nbsp;</p>
@@ -111,6 +111,18 @@
         <div class="row" style="background: #6B2900;">
             <div class="col" id="btnBackToMenu" onclick="fnShowMenu()">
                 <h1 id="lblBackToMenu" style="text-align: center;">Back to menu<br></h1>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="ctnTurnStats" style="display:none">
+        <div class="row" style="background: var(--dark);">
+            <div class="col">
+                <h1 id="hdTurnScore" style="text-align: center;">Turn score</h1>
+                <p id="lblRoundScore" style="text-align: center;">Paragraph</p>
+            </div>
+            <div class="col">
+                <h1 style="text-align: center;">Rounds complete</h1>
+                <p id="lblTurnsComplete" style="text-align: center;">Paragraph</p>
             </div>
         </div>
     </div>
