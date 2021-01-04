@@ -31,7 +31,7 @@ function fnEndTurn() {
     // Output Turn result HTML
     document.getElementById("lblRoundScore").innerHTML = RoundScore;
     document.getElementById("lblTurnsComplete").innerHTML = TurnCompleted;
-    document.getElementById("ctnTurnStats").style.display = "block";
+    document.getElementById("CtnTurnStats").style.display = "block";
 
     // Move to turn end screen
     fnShowTurnEnd()

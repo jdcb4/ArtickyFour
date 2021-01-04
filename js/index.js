@@ -20,7 +20,7 @@ var CurrentWord = '';
 var CurrentWord = '';
 
 // Initiate settings variables
-var TurnTime = 30;                              //Time of a turn in seconds
+var TurnTime = 5;                              //Time of a turn in seconds
 var TimerUpdateInterval = 1000;                 //Countdown update frequency in miliseconds
 
 
@@ -57,12 +57,7 @@ function fnNextWord() {
 
     document.getElementById("lblTurnScore").innerHTML = 
         'Turn Score: ' 
-        + TurnScore 
-/*         + "<br> Correct: " 
-        + TurnCorrect 
-        + "<br> Skipped: " 
-        + TurnSkipped */
-        ;
+        + TurnScore;
     
     if (this[Category].length === 0) {
         this[Category] = this['OriginalList' + Category].slice();
