@@ -20,7 +20,7 @@ var CurrentWord = '';
 var CurrentWord = '';
 
 // Initiate settings variables
-var TurnTime = 5;                              //Time of a turn in seconds
+var TurnTime = 30;                              //Time of a turn in seconds
 var TimerUpdateInterval = 1000;                 //Countdown update frequency in miliseconds
 
 
