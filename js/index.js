@@ -9,6 +9,7 @@ var RoundAttempted = 0;
 var RoundScore = 0;
 var RoundSkipped = 0;
 var TurnCompleted = 0;
+var dudvar = 0;
 
 // Initiate blank string variables
 var Category = "";
@@ -29,54 +30,47 @@ function fnSelect() {
     fnShuffle(this[Category]);
     CurrentWord = this[Category].pop();
     document.getElementById("lblWord").innerHTML = CurrentWord;
-    RecentWord = CurrentWord;
-    WordList = CurrentWord;
     document.getElementById("lblCategory").innerHTML = "Category: " + Category;
 }
 
 
 function fnNext() {
-    document.getElementById("WordList").innerHTML = WordList;
+    WordList = WordList.concat(CurrentWord + "<br>");
     TurnCorrect++;
-    TurnAttempted++;
     TurnScore++;
-    if (this[Category].length === 0) {
-        this[Category] = this['OriginalList' + Category].slice();
-        fnShuffle(this[Category]);
-    }
-    CurrentWord = this[Category].pop();
-    RecentWord = CurrentWord;
-    WordList = WordList.concat("<br>" + RecentWord);
-    document.getElementById("lblWord").innerHTML = CurrentWord;
-    document.getElementById("lblTurnScore").innerHTML = 
-        'Turn Score: ' 
-        + TurnScore 
-        + "<br> Correct: " 
-        + TurnCorrect 
-        + "<br> Skipped: " 
-        + TurnSkipped;
-
+    fnNextWord();
 }
 
 
 function fnSkip() {
+    SkipList = SkipList.concat(CurrentWord + "<br>")
     TurnSkipped++
-    TurnAttempted++
-    TurnSkipped > 1 ? TurnScore-- : dudvar === 1 ;
-    SkipList = SkipList.concat(RecentWord + "<br>")
+    TurnSkipped > 1 ? TurnScore-- : dudvar = 1;
+    fnNextWord();
+}
+
+function fnNextWord() {
+    TurnAttempted++;
+
+    document.getElementById("WordList").innerHTML = WordList;
+    document.getElementById("SkipList").innerHTML = SkipList;
+
+    document.getElementById("lblTurnScore").innerHTML = 
+        'Turn Score: ' 
+        + TurnScore 
+/*         + "<br> Correct: " 
+        + TurnCorrect 
+        + "<br> Skipped: " 
+        + TurnSkipped */
+        ;
+    
     if (this[Category].length === 0) {
         this[Category] = this['OriginalList' + Category].slice();
         fnShuffle(this[Category]);
     }
+
     CurrentWord = this[Category].pop();
-    RecentWord = CurrentWord
+
     document.getElementById("lblWord").innerHTML = CurrentWord;
-    document.getElementById("SkipList").innerHTML = SkipList;
-    document.getElementById("lblTurnScore").innerHTML = 
-        'Turn Score: ' 
-        + TurnScore 
-        + "<br> Correct: " 
-        + TurnCorrect 
-        + "<br> Skipped: " 
-        + TurnSkipped;
-}
+    
+    }

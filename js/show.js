@@ -1,3 +1,7 @@
+// Functions for switching views
+// Each function first hids all containers, then unhides the chosen container
+
+
 function fnShowStart() {
     document.querySelectorAll(".container").forEach(container => container.style.display = "none");
     document.getElementById("CtnStart").style.display = "block";

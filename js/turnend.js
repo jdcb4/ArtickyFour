@@ -20,11 +20,13 @@ function fnEndTurn() {
     RoundSkipped += TurnSkipped;
     TurnCompleted++;
 
-    // Reset turn counters
+    // Reset turn variables
     TurnCorrect = 0;
     TurnSkipped = 0;
     TurnAttempted = 0;
     TurnScore = 0;
+    SkipList = ''
+    WordList = ''
 
     // Output Turn result HTML
     document.getElementById("lblRoundScore").innerHTML = RoundScore;
