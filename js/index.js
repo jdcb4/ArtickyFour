@@ -38,7 +38,9 @@ function fnNext() {
     WordList = WordList.concat(CurrentWord + "<br>");
     TurnCorrect++;
     TurnScore++;
+    fnNextSound();
     fnNextWord();
+    
 }
 
 
@@ -46,6 +48,7 @@ function fnSkip() {
     SkipList = SkipList.concat(CurrentWord + "<br>")
     TurnSkipped++
     TurnSkipped > 1 ? TurnScore-- : dudvar = 1;
+    fnSkipSound();
     fnNextWord();
 }
 
